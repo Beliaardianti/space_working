@@ -9,8 +9,8 @@ function PhotoGallery({
   lng,
 }: {
   photos: string[];
-  lat: string;
-  lng?: string;
+  lat: number;
+  lng: number;
 }) {
   return (
     <div className="mt-[30px] grid grid-cols-3 xl:grid-cols-4 gap-x-5">

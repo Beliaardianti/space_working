@@ -5,12 +5,12 @@ export interface Listing {
   description: string;
   address: string;
   sqft: number;
-  wifi_speed: number;
-  max_person: number;
+  max_capacity: number;
+  facilities?: string[];
   attachments?: string[];
   price_per_day: number;
-  full_suppport_available: number;
-  gym_area_available: number;
-  mini_cafe_available: number;
-  cinema_available: number;
+  price_per_month: number;
+  price_per_year: number;
+  latitude: number;
+  longitude: number;
 }

@@ -152,14 +152,14 @@ function Detail({ params }: { params: { id: string } }) {
               subtitle="All Movies Included"
             />
           </div>
-          <Map lat={listing?.latitude} lng={listing?.longitude} />
+          <Map lat={listing?.latitude ?? 0} lng={listing?.longitude ?? 0} />
           {/* <CustomerReviews /> */}
         </div>
         <BookingSection
           id={params?.id}
-          day={listing?.price_per_day}
-          month={listing?.price_per_month}
-          year={listing?.price_per_year}
+          day={listing?.price_per_day ?? 0}
+          month={listing?.price_per_month ?? 0}
+          year={listing?.price_per_year ?? 0}
         />
       </section>
 

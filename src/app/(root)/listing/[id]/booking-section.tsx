@@ -8,9 +8,9 @@ import React from "react";
 
 interface BookingSectionProps {
   id: string;
-  day: string;
-  month: string;
-  year: string;
+  day: number;
+  month: number;
+  year: number;
 }
 
 function BookingSection({ id, day, month, year }: BookingSectionProps) {
