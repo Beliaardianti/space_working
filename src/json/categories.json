@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "icon": "/icons/microscope.svg",
+      "title": "Virtual Office",
+      "subtitle": "18"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Co-Working Space",
+      "subtitle": "20"
+    },
+    {
+      "icon": "/icons/house-2 2.svg",
+      "title": "Private Working Space",
+      "subtitle": "25"
+    },
+    {
+      "icon": "/icons/building-4.svg",
+      "title": "Meeting Room",
+      "subtitle": "10"
+    }
+  ]
+}
