@@ -6,6 +6,7 @@ export interface DealsProps {
   wide: number;
   capacity: number;
   wifi: number;
+  facility: string;
 }
 
 export interface CategoriesProps {
