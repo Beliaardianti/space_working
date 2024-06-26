@@ -36,7 +36,7 @@ function CardReview({
             title={username}
             subtitle={jobdesk}
             section='header'
-            textSize='text-sm md:text-base' 
+      
           />
         </div>
       </div>
