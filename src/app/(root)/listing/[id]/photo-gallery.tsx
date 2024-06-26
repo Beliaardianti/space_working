@@ -3,10 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 
-function PhotoGallery({ photos, lat, lng }) {
-  const [selectedPhoto, setSelectedPhoto] = useState(photos[0]);
+interface PhotoGalleryProps {
+  photos: string[];
+  lat?: number;
+  lng?: number;
+}
 
-  const handlePhotoClick = (photo) => {
+const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, lat, lng }) => {
+  const [selectedPhoto, setSelectedPhoto] = useState<string>(photos[0]);
+
+  const handlePhotoClick = (photo: string) => {
     setSelectedPhoto(photo);
   };
 
