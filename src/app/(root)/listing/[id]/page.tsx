@@ -21,11 +21,8 @@ function Detail({ params }: { params: { id: string } }) {
   const listing: Listing | undefined = useMemo(() => data?.data, [data]);
   return (
     <main>
-      <section
-        id="overview-section"
-        className="bg-gray-light pt-[170px] pb-[50px]"
-      >
-        <div className="px-10 xl:container xl:mx-auto">
+      <section id="overview-section" className="bg-gray-light pt-[170px] pb-[50px]">
+        <div className="px-4 md:px-10 xl:container xl:mx-auto">
           <Breadcrumbs />
           {listing?.attachments && (
             <PhotoGallery
@@ -35,24 +32,22 @@ function Detail({ params }: { params: { id: string } }) {
             />
           )}
 
-          <div className="mt-[30px] grid grid-cols-3 xl:grid-cols-4 gap-x-5">
-            <div className="col-span-2 xl:col-span-3 space-y-5 pr-[50px]">
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-x-5">
+            <div className="col-span-2 xl:col-span-3 space-y-5 pr-0 lg:pr-5">
               <Badge>Working Space</Badge>
-
-              <div className="flex items-center justify-between">
-                <h1 className="font-bold text-[32px] leading-[48px] text-secondary max-w-[300px]">
+              <div className="flex flex-col md:flex-row items-start justify-between">
+                <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-tight text-secondary max-w-full md:max-w-[300px]">
                   {listing?.title}
                 </h1>
               </div>
-
-              <div className="flex items-center space-x-[30px]">
+              <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8">
                 <div className="flex items-center font-semibold leading-6">
                   <Image
                     src="/icons/location-dark.svg"
                     alt="location-dark"
-                    height={0}
-                    width={0}
-                    className="w-5 h-5 mr-1"
+                    height={20}
+                    width={20}
+                    className="mr-1"
                   />
                   {listing?.address}
                 </div>
@@ -60,9 +55,9 @@ function Detail({ params }: { params: { id: string } }) {
                   <Image
                     src="/icons/format-square-dark.svg"
                     alt="format-square-dark"
-                    height={0}
-                    width={0}
-                    className="w-5 h-5 mr-1"
+                    height={20}
+                    width={20}
+                    className="mr-1"
                   />
                   {listing?.sqft} sqft
                 </div>
@@ -70,9 +65,9 @@ function Detail({ params }: { params: { id: string } }) {
                   <Image
                     src="/icons/profile-2user-dark.svg"
                     alt="profile-2user-dark"
-                    height={0}
-                    width={0}
-                    className="w-5 h-5 mr-1"
+                    height={20}
+                    width={20}
+                    className="mr-1"
                   />
                   {listing?.max_capacity} people
                 </div>
@@ -80,23 +75,23 @@ function Detail({ params }: { params: { id: string } }) {
                   <Image
                     src="/icons/wifi-dark.svg"
                     alt="wifi-dark"
-                    height={0}
-                    width={0}
-                    className="w-5 h-5 mr-1"
+                    height={20}
+                    width={20}
+                    className="mr-1"
                   />
                   {"Internet Ready"}
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-[20px] px-5 py-4 space-y-5">
+            <div className="bg-white rounded-lg px-5 py-4 space-y-5">
               <span className="font-bold text-lg leading-[27px]">Host</span>
               <div className="flex items-center space-x-3">
                 <Image
                   src="/images/avatar-review.svg"
                   alt="avatar"
-                  height={0}
-                  width={0}
-                  className="h-[50px] w-[50px] rounded-full"
+                  height={50}
+                  width={50}
+                  className="rounded-full"
                 />
                 <div>
                   <h1 className="font-bold text-secondary">Benny</h1>
@@ -122,15 +117,15 @@ function Detail({ params }: { params: { id: string } }) {
 
       <section
         id="about-booking-section"
-        className="px-10 xl:container xl:mx-auto py-[50px] flex space-x-8 xl:space-x-[80px]"
+        className="px-4 md:px-10 xl:container xl:mx-auto py-[50px] flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-[80px]"
       >
-        <div className="w-full max-w-[600px] xl:max-w-[650px] space-y-[30px]">
+        <div className="w-full max-w-full lg:max-w-[600px] xl:max-w-[650px] space-y-[30px]">
           <Title
             section="detail"
             title="Deskripsi Kantor"
             subtitle={listing?.description}
           />
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <CardFacility
               icon="/icons/security.svg"
               title="24/7 Supports"
@@ -153,14 +148,15 @@ function Detail({ params }: { params: { id: string } }) {
             />
           </div>
           <Map lat={listing?.latitude ?? 0} lng={listing?.longitude ?? 0} />
-          {/* <CustomerReviews /> */}
         </div>
-        <BookingSection
-          id={params?.id}
-          day={listing?.price_per_day ?? 0}
-          month={listing?.price_per_month ?? 0}
-          year={listing?.price_per_year ?? 0}
-        />
+        <div className="flex justify-center w-full">
+      <BookingSection
+        id={params?.id}
+        day={listing?.price_per_day ?? 0}
+        month={listing?.price_per_month ?? 0}
+        year={listing?.price_per_year ?? 0}
+      />
+    </div>
       </section>
 
       <ListingShowcase

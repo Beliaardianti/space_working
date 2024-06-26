@@ -28,17 +28,21 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <ReduxProvider>
-          <div className="lg:block hidden">
+          <div className="min-h-screen flex flex-col">
+            {/* Header */}
             <Header />
-            {children}
+
+            {/* Main Content */}
+            <main className="flex-grow">
+              {children}
+            </main>
+
+            {/* Footer */}
             <Footer />
+
+            {/* Toaster Component (or any global components) */}
+            <Toaster />
           </div>
-          <div className="block lg:hidden">
-            <div className="text-secondary h-screen text-2xl text-center leading-snug font-medium my-auto grid place-content-center">
-              Sorry, this page only supported on 1024px screen or above
-            </div>
-          </div>
-          <Toaster />
         </ReduxProvider>
       </body>
     </html>

@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.icon{
+  color: black;
+}
+
+.nav-item {
+    font-weight: 600; 
+    padding: 10px 15px; 
+    font-size: 14px;
+  }
+
+
+  
+  @media screen and (max-width: 768px) {
+    .nav-item {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+
+  }
+
+
+  

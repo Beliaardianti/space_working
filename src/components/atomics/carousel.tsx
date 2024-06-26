@@ -4,11 +4,9 @@ import * as React from 'react'
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from 'embla-carousel-react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
-
-import { cn } from '@/lib/utils'
 import { Button } from '@/components/atomics/button'
+import { cn } from '@/lib/utils'
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -207,7 +205,7 @@ const CarouselPrevious = React.forwardRef<
       variant={!canScrollPrev ? 'disabled' : variant}
       size={size}
       className={cn(
-        'absolute  h-[50px] w-[50px] rounded-full group',
+        'absolute h-[50px] w-[50px] rounded-full group',
         orientation === 'horizontal'
           ? '-left-7 top-1/2 -translate-y-1/2'
           : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -224,7 +222,7 @@ const CarouselPrevious = React.forwardRef<
         width={24}
         className={canScrollPrev ? 'group-hover:hidden' : 'block'}
       />
-       <Image
+      <Image
         src='/icons/arrow-down.svg'
         alt='arrow-left'
         height={24}

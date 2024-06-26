@@ -26,22 +26,23 @@ function ListingShowcase({ id, title, subtitle }: ListingShowcaseProps) {
         <Title title={title} subtitle={subtitle} />
       </div>
       <Carousel className="w-full mt-[30px]">
-        <CarouselContent>
-          {console.log(listings)}
-          {listings?.data?.data.map((item: Listing, index: number) => (
-            <CarouselItem key={index} className="basis-1/4">
-              <CardDeals
-                image={item.attachments?.[0] || ""}
-                title={item.title}
-                slug={"/listing/" + item.slug}
-                price={item.price_per_day}
-                wide={item.sqft}
-                capacity={item.max_capacity}
-                facility={""}
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
+      <CarouselContent>
+  {console.log(listings)}
+  {listings?.data?.data.map((item: Listing, index: number) => (
+    <CarouselItem key={index} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+      <CardDeals
+        image={item.attachments?.[0] || ""}
+        title={item.title}
+        slug={"/listing/" + item.slug}
+        price={item.price_per_day}
+        wide={item.sqft}
+        capacity={item.max_capacity}
+        facility={""}
+      />
+    </CarouselItem>
+  ))}
+</CarouselContent>
+
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>

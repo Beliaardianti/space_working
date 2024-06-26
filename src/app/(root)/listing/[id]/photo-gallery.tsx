@@ -1,31 +1,28 @@
 import { Button } from "@/components/atomics/button";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
-function PhotoGallery({
-  photos,
-  lat,
-  lng,
-}: {
-  photos: string[];
-  lat: number;
-  lng: number;
-}) {
+function PhotoGallery({ photos, lat, lng }) {
+  const [selectedPhoto, setSelectedPhoto] = useState(photos[0]);
+
+  const handlePhotoClick = (photo) => {
+    setSelectedPhoto(photo);
+  };
+
   return (
-    <div className="mt-[30px] grid grid-cols-3 xl:grid-cols-4 gap-x-5">
-      <div className="col-span-2 xl:col-span-3 relative">
+    <div className="mt-[30px] grid gap-5 sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-4">
+      <div className="col-span-1 md:col-span-2 xl:col-span-3 relative">
         <Image
-          src={`${process.env.NEXT_PUBLIC_STORAGE_BASE_URL}/${photos[0]}`}
+          src={`${process.env.NEXT_PUBLIC_STORAGE_BASE_URL}/${selectedPhoto}`}
           alt="image-1"
           height={0}
           width={0}
-          className="w-full h-[520px] rounded-[30px] object-cover"
+          className="w-full h-[320px] sm:h-[400px] md:h-[520px] rounded-[30px] object-cover"
           unoptimized
         />
-
-        <div className="absolute bottom-[30px] right-[30px]">
-          {lat && lng && (
+        {lat && lng && (
+          <div className="absolute bottom-[30px] right-[30px]">
             <Link
               rel="noopener noreferrer"
               target="_blank"
@@ -42,41 +39,27 @@ function PhotoGallery({
                 Lihat Peta
               </Button>
             </Link>
-          )}
-        </div>
+          </div>
+        )}
       </div>
       {photos?.length > 1 && (
-        <div className="space-y-5">
-          {photos?.[1] && (
-            <Image
-              src={`${process.env.NEXT_PUBLIC_STORAGE_BASE_URL}/${photos[1]}`}
-              alt="image-2"
-              height={0}
-              width={0}
-              className="w-full h-[160px] rounded-[20px] object-cover"
-              unoptimized
-            />
-          )}
-          {photos?.[2] && (
-            <Image
-              src={`${process.env.NEXT_PUBLIC_STORAGE_BASE_URL}/${photos[2]}`}
-              alt="image-3"
-              height={0}
-              width={0}
-              className="w-full h-[160px] rounded-[20px] object-cover"
-              unoptimized
-            />
-          )}
-          {photos?.[3] && (
-            <Image
-              src={`${process.env.NEXT_PUBLIC_STORAGE_BASE_URL}/${photos[3]}`}
-              alt="image-4"
-              height={0}
-              width={0}
-              className="w-full h-[160px] rounded-[20px] object-cover"
-              unoptimized
-            />
-          )}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 gap-5">
+          {photos.slice(0, 3).map((photo, index) => (
+            <div
+              key={index}
+              className="col-span-1 cursor-pointer"
+              onClick={() => handlePhotoClick(photo)}
+            >
+              <Image
+                src={`${process.env.NEXT_PUBLIC_STORAGE_BASE_URL}/${photo}`}
+                alt={`image-${index + 2}`}
+                height={0}
+                width={0}
+                className="w-full h-[100px] sm:h-[120px] md:h-[150px] xl:h-[200px] rounded-[20px] object-cover"
+                unoptimized
+              />
+            </div>
+          ))}
         </div>
       )}
     </div>

@@ -9,12 +9,12 @@ import { Separator } from "@/components/atomics/separator";
 function Footer() {
   return (
     <footer className="bg-secondary">
-      <div className="container mx-auto py-[100px]">
-        <div className="grid grid-cols-5">
+      <div className="container mx-auto py-10 md:py-20 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <Menu title="Solutions" data={DataMenu.data.solutions} />
           <Menu title="Product" data={DataMenu.data.product} />
           <Menu title="Company" data={DataMenu.data.company} />
-          <div className="col-span-2 text-white">
+          <div className="lg:col-span-2 text-white">
             <span className="font-semibold leading-6">
               Subscribe & Free Rewards
             </span>
@@ -34,7 +34,7 @@ function Footer() {
                 Subscribe
               </Button>
             </div>
-            <div className="mt-[30px] space-y-3">
+            <div className="mt-8 space-y-3">
               <span className="font-semibold leading-6">Choose Language</span>
               <div className="flex items-center space-x-2.5">
                 <Image
@@ -56,8 +56,8 @@ function Footer() {
             </div>
           </div>
         </div>
-        <Separator className="my-[50px] bg-separator-foreground" />
-        <div className="flex items-center justify-between">
+        <Separator className="my-10 md:my-20 bg-separator-foreground" />
+        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           <Image src="/images/logo.svg" alt="logo" height={36} width={133} />
           <span className="leading-6 text-white">
             All Rights Reserved © 2024

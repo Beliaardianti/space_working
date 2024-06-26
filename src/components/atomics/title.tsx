@@ -2,44 +2,41 @@
 const getTitleStyle = (section: string) => {
   switch (section) {
     case 'hero':
-      return 'text-[55px] leading-[82.5px]'
+      return 'text-3xl md:text-4xl lg:text-5xl xl:text-[55px] leading-8 md:leading-9 lg:leading-[82.5px]';
     case 'header':
-      return 'text-base font-semibold leading-6'
+      return 'text-base md:text-lg lg:text-base xl:text-base font-semibold leading-6 md:leading-7 lg:leading-6 xl:leading-6';
     case 'categories':
-      return 'text-xl font-semibold leading-6'
+      return 'text-xl md:text-2xl lg:text-3xl xl:text-xl font-semibold leading-6 md:leading-7 lg:leading-6 xl:leading-6';
     case 'facility':
-      return 'text-xl font-semibold leading-[30px]'
+      return 'text-xl md:text-2xl lg:text-3xl xl:text-xl font-semibold leading-7 md:leading-8 lg:leading-[30px] xl:leading-8';
     case 'detail':
-      return 'font-bold text-lg leading-[27px] text-secondary'
     case 'booking':
-      return 'font-bold text-lg leading-[27px] text-secondary'
-    case 'empty': 
-      return 'font-bold text-lg leading-[27px] text-secondary text-center'
+    case 'empty':
+      return 'font-bold text-lg md:text-xl lg:text-lg xl:text-lg leading-7 md:leading-8 lg:leading-[27px] xl:leading-8 text-secondary text-center md:text-left';
     default:
-      return 'text-2xl leading-9'
+      return 'text-2xl md:text-3xl lg:text-4xl xl:text-2xl leading-7 md:leading-8 lg:leading-9 xl:leading-7';
   }
 }
 
 const getSubtitleStyle = (section: string) => {
   switch (section) {
     case 'hero':
-      return 'text-lg leading-8 text-secondary'
+      return 'text-base md:text-lg lg:text-base xl:text-lg leading-7 md:leading-8 lg:leading-7 xl:leading-8 text-secondary';
     case 'header':
-      return 'text-sm leading-[21px] text-subtitle'
+      return 'text-sm md:text-base lg:text-sm xl:text-base leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
     case 'categories':
-      return 'text-base leading-6 text-subtitle'
+      return 'text-base md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
     case 'facility':
-      return 'text-base leading-6 text-subtitle'
+      return 'text-base md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
     case 'detail':
-      return 'text-base leading-[30px] text-secondary pt-2.5'
     case 'booking':
-      return 'text-base leading-[30px] text-subtitle pt-2.5'
     case 'empty':
-      return 'text-base leading-[30px] text-subtitle pt-2.5 text-center'
+      return 'text-base md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-7 text-subtitle';
     default:
-      return 'leading-6 text-subtitle'
+      return 'leading-6 text-subtitle';
   }
 }
+
 
 function Title({
   title = '',

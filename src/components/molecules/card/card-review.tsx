@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import CardStar from '@/components/molecules/card/card-star'
-import Title from '@/components/atomics/title'
+import Image from 'next/image';
+import CardStar from '@/components/molecules/card/card-star';
+import Title from '@/components/atomics/title';
 
 function CardReview({
   rating,
@@ -16,27 +16,32 @@ function CardReview({
   jobdesk: string
 }) {
   return (
-    <figure className='bg-gray-light rounded-[20px] px-5 py-4 space-y-5'>
+    <figure className='bg-gray-light rounded-lg px-4 py-4 space-y-4 md:px-5 md:py-4 md:space-y-5'>
       <CardStar rating={rating} variant='review'/>
-      <span className='block text-secondary text-lg leading-8'>
+      <span className='block text-secondary text-sm md:text-base leading-7 md:leading-8'>
         { review }
       </span>
-      <div className='flex items-center space-x-3'>
-        <Image
-          src={avatar}
-          alt='avatar'
-          height={0}
-          width={0}
-          className='h-[50px] w-[50px] rounded-full'
-        />
-        <Title
-          title={username}
-          subtitle={jobdesk}
-          section='header'
-        />
+      <div className='flex items-center mt-3 md:mt-0 md:space-x-3'>
+        <div className='relative h-12 w-12 md:h-16 md:w-16'>
+          <Image
+            src={avatar}
+            alt='avatar'
+            layout='fill'
+            objectFit='cover'
+            className='rounded-full'
+          />
+        </div>
+        <div className='flex flex-col'>
+          <Title
+            title={username}
+            subtitle={jobdesk}
+            section='header'
+            textSize='text-sm md:text-base' 
+          />
+        </div>
       </div>
     </figure>
   )
 }
 
-export default CardReview
+export default CardReview;
