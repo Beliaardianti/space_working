@@ -49,23 +49,25 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, lat, lng }) => {
         )}
       </div>
       {photos?.length > 1 && (
-   <div className="space-y-5 photo grid max-sm:grid-cols-2 gap-2">
-    {photos.slice(0, 3).map((photo, index) => (
-      <div
-        key={index}
-        className="col-span-1 cursor-pointer"
-        onClick={() => handlePhotoClick(photo)}
-      >
-        <Image
-          src={`${process.env.NEXT_PUBLIC_STORAGE_BASE_URL}/${photo}`}
-          alt={`image-${index + 2}`}
-          height={0}
-          width={0}
-          className="w-full h-[100px] sm:h-[120px] md:h-[150px] xl:h-[200px] rounded-[20px] object-cover"
-          unoptimized
-        />
-      </div>
-    ))}
+   <div className="space-y-5 grid max-md:grid-cols-2 gap-3">
+{photos.slice(0, 3).map((photo, index) => (
+  <div
+    key={index}
+    className="col-span-1 cursor-pointer flex items-stretch"
+    onClick={() => handlePhotoClick(photo)}
+  >
+    <Image
+      src={`${process.env.NEXT_PUBLIC_STORAGE_BASE_URL}/${photo}`}
+      alt={`image-${index + 2}`}
+      height={0}
+      width={0}
+      className="w-full h-full rounded-[20px] object-cover"
+      unoptimized
+    />
+  </div>
+))}
+
+
   </div>
 )}
 
