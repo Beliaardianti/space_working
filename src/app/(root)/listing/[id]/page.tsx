@@ -22,7 +22,7 @@ function Detail({ params }: { params: { id: string } }) {
   return (
     <main>
       <section id="overview-section" className="bg-gray-light pt-[170px] pb-[50px]">
-        <div className="px-4 md:px-10 xl:container xl:mx-auto">
+        <div className="px-4 md:px-8 xl:container xl:mx-auto">
           <Breadcrumbs />
           {listing?.attachments && (
             <PhotoGallery
