@@ -23,7 +23,7 @@ function Header() {
     <header className="container mx-auto fixed inset-x-0 top-[30px] z-20 px-4 md:px-8">
       <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-white flex justify-between items-center">
         <Link href="/">
-          <Image
+          <Image  
             src="/images/logo.svg"
             alt="logo"
             height={36}
@@ -32,29 +32,30 @@ function Header() {
         </Link>
 
         <nav className="hidden md:flex">
-          <ul className="flex items-center space-x-6 lg:space-x-8">
-            <li className="cursor-pointer font-semibold leading-6 hover:text-primary">
-              Kantor & Ruang Kerja
-            </li>
-            <li className="cursor-pointer font-semibold leading-6 hover:text-primary">
-              Layanan Bisnis
-            </li>
-            <li className="cursor-pointer font-semibold leading-6 hover:text-primary">
-              Services
-            </li>
-            <li className="cursor-pointer font-semibold leading-6 hover:text-primary">
-              Tentang Kami
-            </li>
-          </ul>
+        <ul className="flex items-center space-x-4 lg:space-x-8 md:text-sm">
+  <li className="cursor-pointer font-semibold hover:text-primary">
+    Kantor & Ruang Kerja
+  </li>
+  <li className="cursor-pointer font-semibold hover:text-primary">
+    Layanan Bisnis
+  </li>
+  <li className="cursor-pointer font-semibold hover:text-primary">
+    Services
+  </li>
+  <li className="cursor-pointer font-semibold hover:text-primary">
+    Tentang Kami
+  </li>
+</ul>
+
         </nav>
 
         <div
           data-login={isLogin}
-          className="hidden md:hidden items-center space-x-3"
+          className="hidden md:flex items-center space-x-3"
         >
-          <Button variant="secondary" size="header">
+          {/* <Button variant="secondary" size="header">
             <Link href="/sign-in">Sign In</Link>
-          </Button>
+          </Button> */}
           <Button variant="default" size="header" className="shadow-button">
             <Link href="/sign-up">Sign Up</Link>
           </Button>
@@ -68,7 +69,7 @@ function Header() {
           </button>
         </div>
 
-        <DropdownMenu>
+        {/* <DropdownMenu>
           <DropdownMenuTrigger
             data-login={isLogin}
             className="hidden md:flex items-center space-x-2 outline-none"
@@ -84,18 +85,10 @@ function Header() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-[240px] mr-8 space-y-4">
             <DropdownMenuItem>
-              <Link href="/dashboard">Dashboard</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="/dashboard/my-listings">My Office</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>My Rentals</DropdownMenuItem>
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>
               <Link href="/sign-in">Logout</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
-        </DropdownMenu>
+        </DropdownMenu> */}
       </div>
 
       {isMenuOpen && (
