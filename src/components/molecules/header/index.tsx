@@ -56,9 +56,9 @@ function Header() {
           {/* <Button variant="secondary" size="header">
             <Link href="/sign-in">Sign In</Link>
           </Button> */}
-          <Button variant="default" size="header" className="shadow-button">
+          {/* <Button variant="default" size="header" className="shadow-button">
             <Link href="/sign-up">Sign Up</Link>
-          </Button>
+          </Button> */}
         </div>
 
         <div className="md:hidden flex items-center">
@@ -92,7 +92,7 @@ function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-white p-4 rounded-2xl mt-4 shadow-lg">
+        <div className="md:hidden bg-white p-4 rounded-2xl mt-4 shadow-lg text-center">
           <nav>
             <ul className="flex flex-col items-start space-y-4">
               <li className="cursor-pointer font-semibold leading-6 hover:text-primary">
@@ -109,7 +109,7 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <div
+          {/* <div
             data-login={isLogin}
             className="flex flex-col items-start space-y-3 mt-4"
           >
@@ -119,7 +119,7 @@ function Header() {
             <Button variant="default" size="header" className="shadow-button">
               <Link href="/sign-up">Sign Up</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       )}
     </header>
