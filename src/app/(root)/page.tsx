@@ -19,7 +19,7 @@ function Home() {
         className={`bg-primary-foreground bg-cover lg:bg-contain bg-right bg-no-repeat bg-[url('/images/bg-image.svg')] min-h-[750px] max-h-[750px] xl:max-h-[850px]`}
       >
         <div className="pt-[226px] container mx-auto">
-          <div className="max-w-[550px] m-10 sm:text-white mb-5">
+          <div className="max-w-[550px] m-10 sm:text-white">
             <Title
               title="Ruang Kantor Eksklusif"
               subtitle="Kantor Premium & Ekslusif yang Ideal, Siap Pakai serta Fasilitas Lengkap. Cocok untuk anda dengan tim yang sedang berkembang dan produktif"
@@ -45,38 +45,37 @@ function Home() {
         </div>
       </section>
 
-      <section id="indicator-section" className="px-4 md:px-6 lg:px-8 xl:px-10 container mx-auto -mt-16 pb-6 md:pb-8 lg:pb-9">
-  <div className="h-auto flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0 md:space-x-6 xl:space-x-12 bg-white shadow-indicator rounded-lg px-4 md:px-6 lg:px-9 py-4 md:py-5 xl:py-6">
-    <CardIndicator
-      icon="/icons/house-2.svg"
-      title="382M"
-      subtitle="Kos Available"
-      variant="indicator"
-    />
-    <Separator orientation="vertical" className="bg-separator hidden md:block" />
-    <CardIndicator
-      icon="/icons/people-2.svg"
-      title="9/10"
-      subtitle="People Happy"
-      variant="indicator"
-    />
-    <Separator orientation="vertical" className="bg-separator hidden md:block" />
-    <CardIndicator
-      icon="/icons/security-user.svg"
-      title="100%"
-      subtitle="High Security"
-      variant="indicator"
-    />
-    <Separator orientation="vertical" className="bg-separator hidden md:block" />
-    <CardIndicator
-      icon="/icons/global.svg"
-      title="183"
-      subtitle="Countries"
-      variant="indicator"
-    />
-  </div>
-</section>
-
+      <section id="indicator-section" className="container mx-auto -mt-16 pb-6 md:pb-8 lg:pb-9">
+        <div className="h-auto flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0 md:space-x-6 xl:space-x-12 bg-white shadow-indicator rounded-lg px-4 md:px-6 lg:px-9 py-4 md:py-5 xl:py-6">
+          <CardIndicator
+            icon="/icons/house-2.svg"
+            title="382M"
+            subtitle="Kos Available"
+            variant="indicator"
+          />
+          <Separator orientation="vertical" className="bg-separator hidden md:block" />
+          <CardIndicator
+            icon="/icons/people-2.svg"
+            title="9/10"
+            subtitle="People Happy"
+            variant="indicator"
+          />
+          <Separator orientation="vertical" className="bg-separator hidden md:block" />
+          <CardIndicator
+            icon="/icons/security-user.svg"
+            title="100%"
+            subtitle="High Security"
+            variant="indicator"
+          />
+          <Separator orientation="vertical" className="bg-separator hidden md:block" />
+          <CardIndicator
+            icon="/icons/global.svg"
+            title="183"
+            subtitle="Countries"
+            variant="indicator"
+          />
+        </div>
+      </section>
 
       <ListingShowcase
         id="deals-section"
