@@ -19,7 +19,7 @@ function Home() {
         className={`bg-primary-foreground bg-cover lg:bg-contain bg-right bg-no-repeat bg-[url('/images/bg-image.svg')] min-h-[750px] max-h-[750px] xl:max-h-[850px]`}
       >
         <div className="pt-[226px] container mx-auto">
-          <div className="max-w-[550px] sm:text-white">
+          <div className="max-w-[550px] lg:px-14">
             <Title
               title="Ruang Kantor Eksklusif"
               subtitle="Kantor Premium & Ekslusif yang Ideal, Siap Pakai serta Fasilitas Lengkap. Cocok untuk anda dengan tim yang sedang berkembang dan produktif"
