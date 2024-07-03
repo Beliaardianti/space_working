@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <header className="container mx-auto fixed inset-x-0 top-[30px] z-20 px-4 md:px-8">
-    <div className="p-6 md:p-6 lg:p-6 rounded-2xl bg-white flex justify-between items-center max-w-screen-lg mx-auto">
+    <div className="p-4 md:p-6 lg:p-6 rounded-2xl bg-white flex justify-between items-center max-w-screen-lg mx-auto">
   <Link href="/">
     <Image  
       src="/images/logo.svg"
@@ -31,8 +31,8 @@ function Header() {
     />
   </Link>
 
-  <nav className="hidden md:flex">
-    <ul className="flex items-center space-x-4 lg:space-x-8 md:text-sm">
+  <nav className="hidden md:flex w-full justify-end">
+    <ul className="flex items-center space-x-8 md:text-sm">
       <li className="cursor-pointer font-semibold hover:text-primary">
         Kantor & Ruang Kerja
       </li>
@@ -47,6 +47,8 @@ function Header() {
       </li>
     </ul>
   </nav>
+
+
 
   <div
     data-login={isLogin}
