@@ -27,29 +27,30 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, lat, lng }) => {
           className="w-full h-[320px] sm:h-[400px] md:h-[520px] rounded-[30px] object-cover"
           unoptimized
         />
-        {lat && lng && (
-          <div className="absolute bottom-[30px] right-[30px]">
-            <Link
-              rel="noopener noreferrer"
-              target="_blank"
-              href={`https://maps.google.com/maps?q=${lat},${lng}&hl=es;z=14&amp;output=embed`}
-            >
-              <Button className="flex" variant="third">
-                <Image
-                  src="/icons/direct-right.svg"
-                  alt="direct-right"
-                  height={24}
-                  width={24}
-                  className="mr-2.5"
-                />
-                Lihat Peta
-              </Button>
-            </Link>
-          </div>
-        )}
+     {lat && lng && (
+  <div className="absolute bottom-[28px] right-[30px]">
+    <Link
+      rel="noopener noreferrer"
+      target="_blank"
+      href={`https://maps.google.com/maps?q=${lat},${lng}&hl=es;z=14&amp;output=embed`}
+    >
+      <Button className="flex" variant="third">
+        <Image
+          src="/icons/direct-right.svg"
+          alt="direct-right"
+          height={24}
+          width={24}
+          className="mr-2.5"
+        />
+        Lihat Peta
+      </Button>
+    </Link>
+  </div>
+)}
+
       </div>
       {photos?.length > 1 && (
-   <div className="space-y-5 grid max-md:grid-cols-2 gap-3">
+   <div className="grid max-md:grid-cols-2 gap-5">
 {photos.slice(0, 3).map((photo, index) => (
   <div
     key={index}
