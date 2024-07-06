@@ -20,8 +20,8 @@ function Header() {
   }
 
   return (
-    <header className="container mx-auto fixed inset-x-0 top-[30px] z-20 px-4 md:px-8">
-    <div className="p-4 md:p-6 lg:p-6 rounded-2xl bg-white flex justify-between items-center max-w-screen-lg mx-auto">
+    <header className="w-full fixed inset-x-0 top-[30px] px-4 md:px-8 z-50">
+    <div className="p-4 md:p-6 lg:p-6 rounded-2xl bg-white flex justify-between items-center lg:max-w-screen-xl max-w-screen-lg mx-auto">
   <Link href="/">
     <Image  
       src="/images/logo.svg"
