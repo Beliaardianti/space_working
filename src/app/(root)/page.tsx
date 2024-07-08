@@ -18,8 +18,8 @@ function Home() {
         id="hero-section"
         className={`bg-primary-foreground bg-cover lg:bg-contain bg-right bg-no-repeat bg-[url('/images/bg-image.svg')] min-h-[750px] max-h-[750px] xl:max-h-[850px]`}
       >
-        <div className="pt-[226px] container mx-auto">
-          <div className="max-w-[550px] lg:px-14">
+        <div className="pt-[226px] container mx-auto max-sm:px-8">
+          <div className="max-w-[550px] lg:px-14 sm:px-0 sm:text-left md:text-left">
             <Title
               title="Ruang Kantor Eksklusif"
               subtitle="Kantor Premium & Ekslusif yang Ideal, Siap Pakai serta Fasilitas Lengkap. Cocok untuk anda dengan tim yang sedang berkembang dan produktif"
@@ -45,8 +45,8 @@ function Home() {
         </div>
       </section>
 
-      <section id="indicator-section" className="container mx-auto -mt-16 pb-6 md:pb-8 lg:pb-9">
-        <div className="h-auto flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0 md:space-x-6 xl:space-x-12 bg-white shadow-indicator rounded-lg px-4 md:px-6 lg:px-9 py-4 md:py-5 xl:py-6">
+      <section id="indicator-section" className="container mx-auto -mt-16 pb-6 md:pb-8 p-5 lg:pb-9">
+        <div className="h-auto flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0 md:space-x-6 xl:space-x-12 bg-white shadow-indicator rounded-lg px-8 md:px-6 lg:px-9 py-4 md:py-5 xl:py-6">
           <CardIndicator
             icon="/icons/house-2.svg"
             title="382M"
@@ -84,7 +84,7 @@ function Home() {
       />
 
       <section id="categories-section" className="bg-gray-light">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-10 py-8 xl:py-12">
+        <div className="container mx-auto px-10 md:px-2 lg:px-8 xl:px-10 py-8 xl:py-12">
           <div className="flex items-center justify-between">
             <Title title="Categories" subtitle="We provide everything" />
             <div>
@@ -108,7 +108,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="benefits-section" className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 mt-10">
+      <section id="benefits-section" className="container mx-auto px-10 sm:px-6 md:px-8 lg:px-10 mt-10">
         <div className="flex flex-col xl:flex-row justify-between gap-8">
           <div className="w-full xl:w-1/2">
             <h1 className="font-bold text-2xl md:text-3xl leading-snug max-w-full">
@@ -172,6 +172,7 @@ function Home() {
             title="Happy Customers"
             subtitle="We’d love to come back again soon"
             section=""
+           
           />
         </div>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
