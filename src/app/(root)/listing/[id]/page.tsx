@@ -121,9 +121,9 @@ function Detail({ params }: { params: { id: string } }) {
 
       <section
         id="about-booking-section"
-        className="px-5 md:px-10 sm:px-8 xl:container xl:mx-auto py-[50px] flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-[80px]"
+        className="px-5 md:px-10 sm:px-8 text-sm xl:container xl:mx-auto py-[50px] flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-[80px]"
       >
-        <div className="w-full max-w-full lg:max-w-[600px] xl:max-w-[650px] space-y-[30px]">
+        <div className="w-full max-w-full lg:max-w-[500px] sm:px-10 xl:max-w-[650px] space-y-[30px]">
           <Title
             section="detail"
             title="Deskripsi Kantor"
