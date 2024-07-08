@@ -2,7 +2,7 @@
 const getTitleStyle = (section: string) => {
   switch (section) {
     case 'hero':
-      return 'text-3xl md:text-4xl lg:text-5xl xl:text-[55px] leading-8 md:leading-9 lg:leading-[82.5px]';
+      return 'text-3xl md:text-4xl lg:text-5xl xl:text-[55px] leading-8 md:leading-8 lg:leading-[82.5px]';
     case 'header':
       return 'text-base md:text-lg lg:text-base xl:text-base font-semibold leading-6 md:leading-7 lg:leading-6 xl:leading-6';
     case 'categories':
@@ -21,21 +21,22 @@ const getTitleStyle = (section: string) => {
 const getSubtitleStyle = (section: string) => {
   switch (section) {
     case 'hero':
-      return 'text-base md:text-lg lg:text-base xl:text-lg leading-7 md:leading-8 lg:leading-7 xl:leading-8 text-secondary';
+      return 'text-base sm:text-left md:text-lg lg:text-base xl:text-lg leading-7 md:leading-8 lg:leading-7 xl:leading-8 text-secondary';
     case 'header':
-      return 'text-sm md:text-base lg:text-sm xl:text-base leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
+      return 'text-sm sm:text-left md:text-base lg:text-sm xl:text-base leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
     case 'categories':
-      return 'text-base md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
+      return 'text-base sm:text-left md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
     case 'facility':
-      return 'text-base md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
+      return 'text-base sm:text-left md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-6 text-subtitle';
     case 'detail':
     case 'booking':
     case 'empty':
-      return 'text-base md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-7 text-subtitle';
+      return 'text-base sm:text-left md:text-lg lg:text-base xl:text-lg leading-6 md:leading-7 lg:leading-6 xl:leading-7 text-subtitle';
     default:
       return 'leading-6 text-subtitle';
   }
 }
+
 
 
 function Title({
