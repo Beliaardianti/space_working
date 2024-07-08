@@ -22,7 +22,7 @@ function Detail({ params }: { params: { id: string } }) {
   return (
     <main>
       <section id="overview-section" className="bg-gray-light pt-[170px] pb-[50px]">
-        <div className="px-4 md:px-8 xl:container xl:mx-auto">
+        <div className="px-6 md:px-8 xl:container xl:mx-auto">
           <Breadcrumbs />
           {listing?.attachments && (
             <PhotoGallery
@@ -33,8 +33,12 @@ function Detail({ params }: { params: { id: string } }) {
           )}
 
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-x-5">
-            <div className="col-span-2 xl:col-span-3 space-y-5 pr-0 lg:pr-5">
-              <Badge>Working Space</Badge>
+          <div className="col-span-2 xl:col-span-3 space-y-5 pr-0 lg:pr-5">
+  <Badge className="text-xs py-1 rounded-md sm:py-5 md:py-4 px-2 sm:text-lg sm:px-4 md:px-5">
+    Working Space
+  </Badge>
+
+
               <div className="flex flex-col md:flex-row items-start justify-between">
                 <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-tight text-secondary max-w-full md:max-w-[300px]">
                   {listing?.title}
@@ -83,7 +87,7 @@ function Detail({ params }: { params: { id: string } }) {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-lg px-5 py-4 space-y-5">
+            <div className="bg-white rounded-lg px-5 py-4 mt-8 space-y-5">
               <span className="font-bold text-lg leading-[27px]">Host</span>
               <div className="flex items-center space-x-3">
                 <Image
@@ -117,7 +121,7 @@ function Detail({ params }: { params: { id: string } }) {
 
       <section
         id="about-booking-section"
-        className="px-4 md:px-10 xl:container xl:mx-auto py-[50px] flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-[80px]"
+        className="px-5 md:px-10 sm:px-8 xl:container xl:mx-auto py-[50px] flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-[80px]"
       >
         <div className="w-full max-w-full lg:max-w-[600px] xl:max-w-[650px] space-y-[30px]">
           <Title
